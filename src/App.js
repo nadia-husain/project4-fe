@@ -17,6 +17,7 @@ import PlanCreateForm from './Components/Plan/PlanCreateForm';
 import ReviewCreateForm from './Components/reviews/ReviewCreateForm';
 import ViewDetails from './Components/ViewDetails/ViewDetails';
 import logo from './travel-buddy.png'
+import { CDBBtn, CDBContainer } from 'cdbreact';
 
 export default function App() {
   const [isAuth, setIsAuth]= useState(false)
@@ -86,15 +87,12 @@ export default function App() {
 
   // navbar with conditional rendering based on authentication
   const navbar = isAuth ? (
-    <>
-     {/* <Link className="my-navbar" to="/">Home</Link> &nbsp;  */}
-     <Link className="my-navbar" to="/header">Explore</Link> &nbsp; 
-     <Link className="my-navbar" to="/calendar">MyCalendar</Link> &nbsp; 
-     {/* <Link className="my-navbar" to="/plan">Plan</Link> &nbsp;  */}
-     {/* <Link className="my-navbar" to="/review">Review</Link> &nbsp;  */}
-     <Link className="my-navbar" to="/logout" onClick={onLogOutHandler}>Logout</Link>&nbsp;
+<>
+
+     <Link to="/signup"><button className='sign'>Sign Up</button></Link>&nbsp;
+     <Link to="/signin"><button className='sign'>Sign In</button></Link> &nbsp;
      
-    </>
+  </>
   )
   :
   (

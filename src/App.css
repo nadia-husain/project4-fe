@@ -90,3 +90,12 @@
   padding: 5vh;
 }
 
+.sign {
+  background-color: #FFA843;
+    border: 0;
+    border-radius: 30vh;
+    width: 15vh;
+    height: 6vh;
+    color: #03045E;
+    font-weight: 600;
+  }
